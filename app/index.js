@@ -1,11 +1,15 @@
 'use strict';
 
 var express = require('express');
-var logger = require('morgan');
+var morgan = require('morgan');
 
 var app = express();
+var logger = morgan();
 
-app.use(logger());
+app.set('view engine', 'jade');
+app.set('views', __dirname + '/views');
+
+app.use(logger);
 app.use(express.static(__dirname + '/static'));
 
 app.get('/', function(req, res){
