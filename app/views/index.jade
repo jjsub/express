@@ -1,0 +1,12 @@
+doctype html
+html(lang="en")
+  head
+    title Jade is Awesome
+  body
+    h1 Jade - node template engine
+    #coolId.coolClass
+      p I'm in a div and its 
+        strong awesome
+    #awesomeList
+      - for (var x = 0; x < 100; x++)
+        li item #{x}

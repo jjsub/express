@@ -13,11 +13,11 @@ app.use(logger);
 app.use(express.static(__dirname + '/static'));
 
 app.get('/', function(req, res){
-  res.send('Hello World');
+  res.render('index');
 });
 
 app.get('/cooltext', function(req, res){
-  res.send('You are cool!');
+  res.send('<h1>You</h1> <strong>are</strong> <em>cool</em>!');
 });
 
 app.get('/nope', function(req, res){
