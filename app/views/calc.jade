@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title Calc
+  body
+    h1 Awesome Calculator
+
+    if ans
+      h2 Computed:
+      p #{x} #{op} #{y} = #{ans}
+
+    form(method='post', action='/calc')
+      input(type='text', name='x', autofocus=true)
+      select(name='op')
+        option +
+        option -
+        option *
+        option /
+      input(type='text', name='y')
+      button Compute
+
