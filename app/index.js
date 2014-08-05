@@ -28,6 +28,15 @@ app.get('/yep', function(req, res){
   res.send('yep');
 });
 
+app.get('/add/:a/:b/:c/:d', function(req, res){
+  var a = parseInt(req.params.a);
+  var b = parseInt(req.params.b);
+  var c = parseInt(req.params.c);
+  var d = parseInt(req.params.d);
+  var sum = a + b + c + d;
+  res.render('sum', {title: 'My awesome website', sum: sum});
+});
+
 app.listen(3000, function(){
   console.log('Node is running on port 3000');
 });
